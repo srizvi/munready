@@ -1,16 +1,28 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
+  "semanticCommits": "enabled",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
+  "dependencyDashboardTitle": "chore: dependency dashboard",
+  "dependencyDashboardLabels": ["🧹 chore", "🔗 dependencies", "🤖 renovatebot"],
+  "labels": ["🧹 chore", "🔗 dependencies", "🤖 renovatebot"],
+  "automerge": false,
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@acme/"],
-      "enabled": false
+      "enabled": false,
+      "matchPackageNames": ["/^@momo//"]
+    },
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "3 days"
     }
   ],
   "updateInternalDeps": true,
   "rangeStrategy": "bump",
-  "automerge": true,
   "npm": {
-    "fileMatch": ["(^|/)package\\.json$", "(^|/)package\\.json\\.hbs$"]
-  }
+    "managerFilePatterns": ["/(^|/)package\\.json$/", "/(^|/)package\\.json\\.hbs$/"]
+  },
+  "timezone": "Asia/Singapore",
+  "schedule": ["every weekend"]
 }

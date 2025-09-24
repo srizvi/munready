@@ -1,0 +1,27 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: "0.2"
+ignorePaths:
+  - .git/
+  - node_modules/
+  - .turbo/
+  - .next/
+  - dist/
+  - build/
+  - coverage/
+  - pnpm-lock.yaml
+  - "**/*.svg"
+  - .changeset/
+  - .vscode/
+  - .cursor/
+  - .ai/
+  - "**/*.min.js"
+  - "**/*.min.css"
+  - "**/public/fonts/"
+  - "**/public/images/"
+  - .env.*
+  - .env
+  - abba/
+  - package.json
+  - apps/web/src/ui/experimental/abstract-painting.tsx
+words:
+  - momo
