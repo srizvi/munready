@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure solid backgrounds with no opacity issues */
+* {
+  opacity: 1 !important;
+}
+
+/* Theme-aware backgrounds for designated areas only */
+.theme-background {
+  background-color: var(--theme-primary) !important;
+}
+
+.theme-secondary-background {
+  background-color: var(--theme-secondary) !important;
+}
+
+.theme-accent-background {
+  background-color: var(--theme-accent) !important;
+}
+
+/* Ensure no persistent color blocks at bottom */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+/* Force immediate theme application with diplomatic dawn as default */
+:root {
+  --theme-primary: #f7e7dc;
+  --theme-secondary: #e8c9b0;
+  --theme-accent: #d4b59e;
+  --theme-text: #3b3b3b;
+}
+
+/* Remove any bottom color blocks */
+body::after,
+#root::after,
+.App::after {
+  display: none !important;
+}
+
+/* Ensure main content area has proper background */
+.main-content {
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+/* Left sidebar should use theme colors */
+.sidebar {
+  background-color: var(--theme-primary) !important;
+  opacity: 1 !important;
+}
+
+/* Welcome header styling */
+.welcome-header {
+  background-color: white !important;
+  color: var(--theme-text) !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
+}
+
+/* Theme-aware text colors */
+.theme-text {
+  color: var(--theme-text) !important;
+}
+
+/* Ensure buttons and interactive elements use theme colors properly */
+.theme-button-active {
+  background-color: var(--theme-accent) !important;
+  color: var(--theme-text) !important;
+}
+
+/* Remove all translucent overlays */
+.bg-opacity-50,
+.bg-opacity-75,
+.bg-opacity-25 {
+  background-color: var(--theme-primary) !important;
+  opacity: 1 !important;
+}
