@@ -1,0 +1,37 @@
+{
+  "name": "@momo/starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm with-env",
+    "clean": "git clean -xdf .cache .turbo node_modules",
+    "dev": "pnpm with-env dev",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "start": "pnpm with-env start",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@momo/ui": "workspace:*",
+    "@momo/validators": "workspace:*",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@momo/eslint-config": "workspace:*",
+    "@momo/prettier-config": "workspace:*",
+    "@momo/tailwind-config": "workspace:*",
+    "@momo/tsconfig": "workspace:*",
+    "@types/node": "^22.18.1",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "dotenv-cli": "^10.0.0",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@momo/prettier-config"
+}
